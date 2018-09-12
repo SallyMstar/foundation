@@ -1,1 +1,75 @@
 /* CSS starter page for new projects */
+
+* {
+	box-sizing: border-box;
+	display: grid;
+}
+
+title {
+	display: none;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header"
+                          "container"
+                          "footer";
+    grid-template-columns: 1fr;
+    background-color: #eeeeef;
+    max-width: 100%;
+    height: 100%;
+}
+
+/* Header Elements */
+#header {
+     grid-area: "header";
+/*     position: fixed;
+*/     width: 100%;
+     height: 60px;
+     top: 0;
+     left: 0;
+     background-color: lightblue;
+     border-bottom: 2px inset black;
+/*     z-index: 2;
+*/}
+
+#container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr );
+    grid-auto-rows: 100px;
+	grid-gap: 5px;
+    background-color: #eeeeef;
+    width: 100%;
+}
+
+.section1 {
+	border: 8px inset red;
+	grid-column: span 5;
+	grid-row: span 3;
+}
+
+.section2 {
+	border: 8px inset green;
+	grid-column: span 7;
+	grid-row: span 3;
+}
+
+.section3 {
+	border: 8px inset purple;
+	grid-column: 1/13;
+	grid-row: 4/6;
+}
+
+.item {
+	background-color: bisque;
+	border: 1px solid black;
+}
+
+#footer {
+	grid-area: "footer";
+	width: 100%;
+	height: 30px;
+	background-color: lightgray;
+	border: 1px solid black;
+
+}
